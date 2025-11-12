@@ -81,14 +81,24 @@ nav a:focus-visible {
 
 .hero h1 {
   font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
 }
 
 .hero h1,
 .hero-title {
   text-wrap: balance;
   overflow-wrap: anywhere;
-  line-height: 1.15;
-  margin-bottom: 0.5rem;
+}
+
+.hero-break {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hero-break {
+    display: inline;
+  }
 }
 
 .hero p {
@@ -134,6 +144,18 @@ section {
 .services-list .service-card {
   flex: 1 1 320px;
   max-width: 380px;
+}
+
+.service-card .thumb {
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+
+.service-card .thumb img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 @media (min-width: 1024px) {
@@ -235,6 +257,39 @@ footer {
 footer a {
   text-decoration: none;
   color: var(--color-primary);
+}
+
+.img-rounded {
+  border-radius: 12px;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.section-wide {
+  margin: 2rem 0;
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .works-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.company-hero {
+  margin: 2rem 0 1rem;
+}
+
+.company-hero img {
+  max-height: 380px;
+  object-fit: cover;
 }
 
 @media (max-width: 640px) {
